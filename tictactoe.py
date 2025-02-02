@@ -166,6 +166,7 @@ def best_move(board: list):
     Errore: la funzione continua a fare la recursion anche dopo il base case
     TypeError: 'int' object is not iterable
     """
+    best_action = tuple()
 
     # base case
     if terminal(board):
@@ -175,7 +176,6 @@ def best_move(board: list):
         return best_action, None
 
     # controllo del player
-    best_action = tuple()
     play = player(board)
     print(play)
     alpha = -math.inf

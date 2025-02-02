@@ -1,0 +1,36 @@
+X
+Azione: (0, 1)
+Risultato: [[None, 'X', None], [None, None, None], [None, None, None]]
+O
+Azione: (1, 2)
+Risultato: [[None, 'X', None], [None, None, 'O'], [None, None, None]]
+X
+Azione: (2, 1)
+Risultato: [[None, 'X', None], [None, None, 'O'], [None, 'X', None]]
+O
+Azione: (0, 0)
+Risultato: [['O', 'X', None], [None, None, 'O'], [None, 'X', None]]
+X
+Azione: (1, 1)
+Risultato: [['O', 'X', None], [None, 'X', 'O'], [None, 'X', None]]
+Il board è terminale
+Utility: 1
+Traceback (most recent call last):
+  File "/workspaces/126280942/cs50ai/week0/assignments/tictactoe/min.py", line 118, in <module>
+    best_move(board)
+  File "/workspaces/126280942/cs50ai/week0/assignments/tictactoe/min.py", line 74, in best_move
+    value = max(v, best_move(result(board, action))[1])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/126280942/cs50ai/week0/assignments/tictactoe/min.py", line 100, in best_move
+    value = min(best_move(result(board, action))[1])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/126280942/cs50ai/week0/assignments/tictactoe/min.py", line 74, in best_move
+    value = max(v, best_move(result(board, action))[1])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/126280942/cs50ai/week0/assignments/tictactoe/min.py", line 100, in best_move
+    value = min(best_move(result(board, action))[1])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/126280942/cs50ai/week0/assignments/tictactoe/min.py", line 74, in best_move
+    value = max(v, best_move(result(board, action))[1])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
